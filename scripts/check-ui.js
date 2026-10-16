@@ -1,8 +1,2 @@
 #!/usr/bin/env node
-const fs=require('fs'),vm=require('vm');
-const html=fs.readFileSync('index.html','utf8');
-const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/gi)].map(x=>x[1]);
-if(!scripts.length)throw Error('inline script tidak ditemukan');
-for(const [i,s] of scripts.entries())new vm.Script(s,{filename:'index-inline-'+(i+1)+'.js'});
-for(const required of ['data/latest.json','chatBtn','visibleCount','priority'])if(!html.includes(required))throw Error('UI contract hilang: '+required);
-console.log('UI CHECK OK');
+const fs=require('fs'),vm=require('vm');const h=fs.readFileSync('index.html','utf8'),scripts=[...h.matchAll(/<script>([\s\S]*?)<\/script>/gi)].map(x=>x[1]);if(!scripts.length)throw Error('inline script tidak ditemukan');scripts.forEach((s,i)=>new vm.Script(s,{filename:'index-inline-'+(i+1)+'.js'}));for(const x of ['data/latest.json','data/archive.json','must-read','worth-knowing','explore','progressBar','freshness','retry','archive','radarItems'])if(!h.includes(x))throw Error('UI contract hilang: '+x);console.log('UI CHECK OK: phase 2 contract');
