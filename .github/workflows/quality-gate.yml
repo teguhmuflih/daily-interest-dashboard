@@ -17,6 +17,5 @@ jobs:
         run: node scripts/check-ui.js
       - name: Test publisher and schema
         run: node scripts/test-publisher.js
-      - name: Validate production dataset shape
-        run: |
-          node -e "const fs=require('fs');let d=JSON.parse(fs.readFileSync('data/latest.json'));if(!d.edition||!Array.isArray(d.stories)||d.stories.length!==5)process.exit(1);console.log('DATASET CHECK OK')"
+      - name: Validate real production dataset
+        run: node scripts/validate-edition.js data/latest.json
