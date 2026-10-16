@@ -13,9 +13,13 @@ jobs:
       - uses: actions/setup-node@1e60f620b9541d67c8eacb7e1b4a5f30d9c7b3b
         with:
           node-version: '22'
-      - name: Check UI JavaScript contract
+      - name: UI syntax and Phase 2 contract
         run: node scripts/check-ui.js
-      - name: Test publisher and schema
+      - name: Publisher integration test
         run: node scripts/test-publisher.js
-      - name: Validate real production dataset
+      - name: Validate production latest
         run: node scripts/validate-edition.js data/latest.json
+      - name: Validate dated snapshot
+        run: node scripts/validate-edition.js data/$(node -p "require('./data/latest.json').edition").json
+      - name: Check archive references
+        run: node -e "const fs=require('fs'),a=require('./data/archive.json');if(!Array.isArray(a.editions)||!a.editions.length)process.exit(1);for(const e of a.editions){if(!e.date||!e.label||!e.file||!fs.existsSync(e.file))process.exit(1)}console.log('ARCHIVE CHECK OK')"
