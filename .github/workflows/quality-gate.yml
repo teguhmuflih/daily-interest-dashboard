@@ -1,0 +1,22 @@
+name: Quality Gate
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-node@1e60f620b9541d67c8eacb7e1b4a5f30d9c7b3b
+        with:
+          node-version: '22'
+      - name: Check UI JavaScript contract
+        run: node scripts/check-ui.js
+      - name: Test publisher and schema
+        run: node scripts/test-publisher.js
+      - name: Validate production dataset shape
+        run: |
+          node -e "const fs=require('fs');let d=JSON.parse(fs.readFileSync('data/latest.json'));if(!d.edition||!Array.isArray(d.stories)||d.stories.length!==5)process.exit(1);console.log('DATASET CHECK OK')"
