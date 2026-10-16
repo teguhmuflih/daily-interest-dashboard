@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "edition": "2026-10-16",
   "updatedAt": "2026-10-16T12:30:00+07:00",
   "priority": {
@@ -28,6 +28,15 @@
         "novelty": 86,
         "freshness": 100,
         "final_score": 92.1
+      },
+      "learning": {
+        "mentalModel": "Model → inference cost → margin → reinvestment → model/platform advantage",
+        "skillLink": "AI Platform Engineering + FinOps",
+        "lab": "Hitung biaya 1 juta request jika cost/request turun 20%; tulis tiga lever teknis yang mungkin menyebabkannya.",
+        "quiz": {
+          "question": "Metrik mana paling langsung menghubungkan optimasi inference dengan unit economics?",
+          "answer": "Cost per successful request"
+        }
       }
     },
     {
@@ -51,6 +60,15 @@
         "novelty": 91,
         "freshness": 100,
         "final_score": 95
+      },
+      "learning": {
+        "mentalModel": "Demand → capacity → utilization → unit cost → cash flow",
+        "skillLink": "AI Infrastructure + FinOps",
+        "lab": "Buat dashboard hipotetis dengan GPU utilization, queue latency, power cost, dan cost/request. Tentukan dua alert.",
+        "quiz": {
+          "question": "GPU utilization rendah tetapi uptime 99.99%. Apa risiko utamanya?",
+          "answer": "Unit cost memburuk karena kapasitas menganggur"
+        }
       }
     },
     {
@@ -74,6 +92,15 @@
         "novelty": 82,
         "freshness": 90,
         "final_score": 94.1
+      },
+      "learning": {
+        "mentalModel": "Job → LocalQueue → ClusterQueue → quota/admission → scheduler → GPU node",
+        "skillLink": "Kubernetes + AI Platform Engineering",
+        "lab": "Tulis checklist troubleshooting 5 langkah untuk AI Job Pending ketika GPU node terlihat kosong.",
+        "quiz": {
+          "question": "Sebelum menambah GPU node, apa yang perlu diperiksa pada workload berbasis Kueue?",
+          "answer": "Admission dan quota antrean"
+        }
       }
     },
     {
@@ -97,6 +124,15 @@
         "novelty": 89,
         "freshness": 95,
         "final_score": 89.8
+      },
+      "learning": {
+        "mentalModel": "CVE → exposure → exploitability → blast radius → remediation priority",
+        "skillLink": "SRE + Cloud Security",
+        "lab": "Ambil satu CVE hipotetis dan ranking prioritas berdasarkan exposure, exploitability, asset criticality, dan compensating control.",
+        "quiz": {
+          "question": "Mengapa CVSS saja tidak cukup untuk menentukan urutan patch?",
+          "answer": "Karena tidak memasukkan konteks exposure dan exploitability lingkungan kita"
+        }
       }
     },
     {
@@ -120,6 +156,15 @@
         "novelty": 90,
         "freshness": 100,
         "final_score": 89.8
+      },
+      "learning": {
+        "mentalModel": "AI demand → capex/debt → utilization → cash flow → return on invested capital",
+        "skillLink": "Investing + AI Infrastructure Economics",
+        "lab": "Bandingkan dua operator compute hipotetis: satu growth tinggi/leverage tinggi dan satu growth sedang/free cash flow positif.",
+        "quiz": {
+          "question": "Apa sinyal bahwa pertumbuhan AI infra belum tentu menghasilkan investasi yang baik?",
+          "answer": "Capex dan leverage tumbuh lebih cepat daripada cash flow"
+        }
       }
     },
     {
@@ -143,6 +188,15 @@
         "novelty": 84,
         "freshness": 85,
         "final_score": 84.9
+      },
+      "learning": {
+        "mentalModel": "Hazard → exposure → probability → consequence → mitigation → go/no-go",
+        "skillLink": "Ultra Endurance + Risk Management",
+        "lab": "Buat tiga decision point BTS70K untuk cuaca, kondisi tubuh, dan cut-off; tentukan tindakan konservatif tiap kondisi.",
+        "quiz": {
+          "question": "Dalam ultra, kapan keputusan berhenti dapat dianggap keputusan performa yang baik?",
+          "answer": "Saat risiko keselamatan/kerusakan jangka panjang melebihi manfaat melanjutkan"
+        }
       }
     },
     {
@@ -166,6 +220,15 @@
         "novelty": 92,
         "freshness": 100,
         "final_score": 82.5
+      },
+      "learning": {
+        "mentalModel": "Hazard → exposure → probability → consequence → mitigation → go/no-go",
+        "skillLink": "Ultra Endurance + Risk Management",
+        "lab": "Buat tiga decision point BTS70K untuk cuaca, kondisi tubuh, dan cut-off; tentukan tindakan konservatif tiap kondisi.",
+        "quiz": {
+          "question": "Dalam ultra, kapan keputusan berhenti dapat dianggap keputusan performa yang baik?",
+          "answer": "Saat risiko keselamatan/kerusakan jangka panjang melebihi manfaat melanjutkan"
+        }
       }
     },
     {
@@ -189,6 +252,15 @@
         "novelty": 86,
         "freshness": 100,
         "final_score": 80.8
+      },
+      "learning": {
+        "mentalModel": "Hazard → exposure → probability → consequence → mitigation → go/no-go",
+        "skillLink": "Ultra Endurance + Risk Management",
+        "lab": "Buat tiga decision point BTS70K untuk cuaca, kondisi tubuh, dan cut-off; tentukan tindakan konservatif tiap kondisi.",
+        "quiz": {
+          "question": "Dalam ultra, kapan keputusan berhenti dapat dianggap keputusan performa yang baik?",
+          "answer": "Saat risiko keselamatan/kerusakan jangka panjang melebihi manfaat melanjutkan"
+        }
       }
     }
   ],
