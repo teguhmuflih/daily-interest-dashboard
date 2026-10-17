@@ -1,0 +1,17 @@
+(function(){
+"use strict";
+const KEY="daily-interest-learning-v1";
+let state={};
+try{state=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){}
+const $=id=>document.getElementById(id);
+const safe=x=>String(x==null?"":x).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){$("adaptiveStatus").textContent="Penyimpanan lokal tidak tersedia; ekspor progres untuk backup."}}
+function next(st,correct){let prev=st.interval||0;st.attempts=(st.attempts||0)+1;st.correct=(st.correct||0)+(correct?1:0);st.lapses=(st.lapses||0)+(correct?0:1);st.ease=Math.max(1.3,Math.min(3,(st.ease||2.5)+(correct?.1:-.2)));st.interval=correct?(prev===0?1:prev===1?3:Math.round(prev*st.ease)):1;st.reviewedAt=new Date().toISOString();st.dueAt=new Date(Date.now()+st.interval*86400000).toISOString();return st}
+async function data(){const archive=$("archive").value;const url=archive||"./data/latest.json";const r=await fetch(url+"?review="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("Gagal memuat data");return r.json()}
+async function render(){try{const d=await data();const due=d.stories.filter(s=>!state[s.id]||!state[s.id].dueAt||Date.parse(state[s.id].dueAt)<=Date.now());const mastered=d.stories.filter(s=>(state[s.id]||{}).correct>=3);$("adaptiveStatus").textContent=due.length+" perlu review · "+mastered.length+" dikuasai · tersimpan di browser ini";$("adaptiveItems").innerHTML=due.slice(0,8).map(s=>'<div style="border-top:1px solid #334155;padding:12px 0"><b>'+safe(s.title)+'</b><p class="muted">'+safe((s.learning||{}).quiz?.question||"Apa pelajaran penting dari berita ini?")+'</p><button data-answer="yes" data-id="'+safe(s.id)+'">✓ Paham</button> <button data-answer="no" data-id="'+safe(s.id)+'">↻ Ulangi</button><span id="feedback-'+safe(s.id)+'"></span></div>').join("")||'<p class="muted">Semua materi sudah direview. Kembali saat jadwal berikutnya.</p>';window.__reviewStories=d.stories}catch(e){$("adaptiveStatus").textContent=e.message}}
+$("adaptiveItems").addEventListener("click",e=>{const b=e.target.closest("button[data-answer]");if(!b)return;const s=(window.__reviewStories||[]).find(x=>x.id===b.dataset.id);if(!s)return;const correct=b.dataset.answer==="yes";state[s.id]=next(state[s.id]||{},correct);persist();const fb=document.getElementById("feedback-"+s.id);if(fb)fb.textContent=" · "+(s.learning?.quiz?.answer||s.learn||"")+" · review "+state[s.id].interval+" hari lagi";b.parentElement.querySelectorAll("button").forEach(x=>x.disabled=true);setTimeout(render,3000)});
+$("backupLearning").onclick=()=>{const blob=new Blob([JSON.stringify({version:1,state},null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="learning-progress.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+$("restoreLearning").onclick=()=>$("restoreFile").click();
+$("restoreFile").onchange=async e=>{try{const v=JSON.parse(await e.target.files[0].text());if(v.version!==1||!v.state||typeof v.state!=="object"||Array.isArray(v.state))throw Error("Backup tidak valid");state=v.state;persist();render()}catch(err){$("adaptiveStatus").textContent="Impor gagal: "+err.message}};
+$("archive").addEventListener("change",()=>setTimeout(render,50));render();
+})();
