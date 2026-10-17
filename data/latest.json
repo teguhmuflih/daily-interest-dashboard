@@ -1,288 +1,288 @@
 {
   "schemaVersion": 2,
-  "edition": "2026-10-16",
-  "updatedAt": "2026-10-16T12:30:00+07:00",
+  "edition": "2026-10-17",
+  "updatedAt": "2026-10-17T14:09:00+07:00",
   "priority": {
-    "title": "AI infrastructure: reliability sekarang juga masalah ekonomi",
-    "summary": "Pelajari hubungan GPU utilization → queue/batching → cost per request → revenue durability. Ini menjembatani Kubernetes/SRE dengan AI Platform Engineering dan FinOps."
+    "title": "Inference optimization → GPU economics → AI Platform Engineering",
+    "summary": "Pelajari KV-cache routing, GPU utilization, cost per request dan margin; hubungkan performa serving dengan keberlanjutan ekonomi AI."
   },
   "stories": [
     {
-      "id": "ai-model-economics-2026-10-16",
-      "category": "ai",
-      "tier": "must-read",
-      "tag": "🤖 AI · MODEL ECONOMICS",
-      "date": "16 Okt 2026",
-      "title": "Investor menguji ekonomi pertumbuhan Anthropic",
-      "summary": "Pertumbuhan AI tetap besar, tetapi pasar mulai menuntut bukti bahwa revenue, margin dan kebutuhan compute dapat berkembang secara sehat.",
-      "learn": "Hubungkan kualitas model dengan unit economics: revenue growth, gross margin, inference cost dan utilization.",
-      "detail": "Untuk AI Platform Engineering, tekanan bisnis ini turun langsung menjadi keputusan batching, caching, routing dan biaya per successful task.",
-      "source": {
-        "name": "Reuters",
-        "url": "https://www.reuters.com/business/finance/investors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-2026-10-15/"
-      },
-      "scores": {
-        "relevance": 92,
-        "learning_value": 91,
-        "source_quality": 96,
-        "novelty": 86,
-        "freshness": 100,
-        "final_score": 92.1
-      },
-      "learning": {
-        "mentalModel": "Model → inference cost → margin → reinvestment → model/platform advantage",
-        "skillLink": "AI Platform Engineering + FinOps",
-        "lab": "Hitung biaya 1 juta request jika cost/request turun 20%; tulis tiga lever teknis yang mungkin menyebabkannya.",
-        "quiz": {
-          "question": "Metrik mana paling langsung menghubungkan optimasi inference dengan unit economics?",
-          "answer": "Cost per successful request"
-        }
-      }
-    },
-    {
-      "id": "ai-infra-financing-2026-10-16",
+      "id": "beam-llmd-dynamo-inference-2026-10-17",
       "category": "ai-infra",
       "tier": "must-read",
-      "tag": "🧠 AI INFRA · FINOPS",
-      "date": "16 Okt 2026",
-      "title": "Pembiayaan data center AI memasuki stress test",
-      "summary": "Selloff pasar dan suku bunga tinggi membuat investor semakin ketat menilai proyek data center AI dan operator compute yang membutuhkan capex besar.",
-      "learn": "Reliability AI bukan hanya uptime: pantau GPU utilization, financing pressure, power cost dan revenue durability.",
-      "detail": "AI infrastructure harus sustainable secara teknis dan ekonomi. Kapasitas yang menganggur dapat menjadi kegagalan platform meski sistem tidak pernah down.",
+      "tag": "Inference Optimization",
+      "date": "2026-10-16",
+      "title": "Serving AI hingga 5× lebih cepat dengan llm-d dan NVIDIA Dynamo",
+      "summary": "Google Cloud dan Reflection melaporkan throughput hingga 5× serta latensi hingga 8× lebih baik pada benchmark tertentu.",
+      "learn": "Prefix-aware routing, KV-cache tiering, serta pemisahan prefill/decode mengurangi komputasi berulang.",
+      "detail": "Ukur TTFT, throughput token, GPU utilization dan cost per successful request sebelum dan sesudah optimasi.",
       "source": {
-        "name": "Reuters",
-        "url": "https://www.reuters.com/business/finance/market-selloff-rising-rates-test-ai-data-centre-deal-boom-2026-10-15/"
+        "name": "Google Cloud Blog",
+        "url": "https://cloud.google.com/blog/"
       },
       "scores": {
-        "relevance": 96,
-        "learning_value": 94,
-        "source_quality": 96,
-        "novelty": 91,
+        "relevance": 99,
+        "learning_value": 98,
+        "source_quality": 98,
+        "novelty": 98,
         "freshness": 100,
-        "final_score": 95
+        "final_score": 98.5
       },
       "learning": {
-        "mentalModel": "Demand → capacity → utilization → unit cost → cash flow",
-        "skillLink": "AI Infrastructure + FinOps",
-        "lab": "Buat dashboard hipotetis dengan GPU utilization, queue latency, power cost, dan cost/request. Tentukan dua alert.",
+        "mentalModel": "Prefix-aware routing, KV-cache tiering, serta pemisahan prefill/decode mengurangi komputasi berulang.",
+        "skillLink": "AI Platform Engineering + DevOps/SRE",
+        "lab": "Ukur TTFT, throughput token, GPU utilization dan cost per successful request sebelum dan sesudah optimasi.",
         "quiz": {
-          "question": "GPU utilization rendah tetapi uptime 99.99%. Apa risiko utamanya?",
-          "answer": "Unit cost memburuk karena kapasitas menganggur"
+          "question": "Apa indikator terpenting yang harus dipantau dalam studi kasus ini?",
+          "answer": "Prefix-aware routing, KV-cache tiering, serta pemisahan prefill/decode mengurangi komputasi berulang."
         }
       }
     },
     {
-      "id": "kueue-ai-scheduling-2026-10-16",
-      "category": "devops",
+      "id": "coreweave-credit-ai-compute-2026-10-17",
+      "category": "ai-infra",
       "tier": "must-read",
-      "tag": "☸️ DEVOPS · KUBERNETES",
-      "date": "16 Okt 2026",
-      "title": "Queue-aware scheduling penting untuk workload AI",
-      "summary": "Workload AI dan batch membutuhkan admission, queue dan quota sebelum kube-scheduler menempatkan Pod, sehingga Pod Pending tidak selalu berarti node kekurangan resource.",
-      "learn": "Gunakan mental model Job → Queue → Quota → Scheduler → Pod → GPU/CPU.",
-      "detail": "Saat job tertahan, periksa admission dan quota sebelum langsung menambah node. Ini pola troubleshooting penting untuk AI platform.",
+      "tag": "FinOps & Capital Risk",
+      "date": "2026-10-16",
+      "title": "Tekanan kredit CoreWeave menguji ekonomi GPU cloud",
+      "summary": "Saham CoreWeave melemah tajam dan imbal hasil obligasi meningkat di tengah kekhawatiran beban pendanaan.",
+      "learn": "Bedakan backlog, cash flow, capex dan cost of capital pada GPU cloud.",
+      "detail": "Modelkan titik impas investasi GPU dengan skenario utilization berbeda.",
       "source": {
-        "name": "Kubernetes",
-        "url": "https://kubernetes.io/blog/"
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/coreweave-shares-bonds-headed-steep-weekly-losses-ai-borrowing-concerns-mount-2026-10-16/"
       },
       "scores": {
         "relevance": 98,
-        "learning_value": 97,
-        "source_quality": 94,
-        "novelty": 82,
-        "freshness": 90,
-        "final_score": 94.1
+        "learning_value": 95,
+        "source_quality": 98,
+        "novelty": 96,
+        "freshness": 100,
+        "final_score": 97.1
       },
       "learning": {
-        "mentalModel": "Job → LocalQueue → ClusterQueue → quota/admission → scheduler → GPU node",
-        "skillLink": "Kubernetes + AI Platform Engineering",
-        "lab": "Tulis checklist troubleshooting 5 langkah untuk AI Job Pending ketika GPU node terlihat kosong.",
+        "mentalModel": "Bedakan backlog, cash flow, capex dan cost of capital pada GPU cloud.",
+        "skillLink": "AI Platform Engineering + DevOps/SRE",
+        "lab": "Modelkan titik impas investasi GPU dengan skenario utilization berbeda.",
         "quiz": {
-          "question": "Sebelum menambah GPU node, apa yang perlu diperiksa pada workload berbasis Kueue?",
-          "answer": "Admission dan quota antrean"
+          "question": "Apa indikator terpenting yang harus dipantau dalam studi kasus ini?",
+          "answer": "Bedakan backlog, cash flow, capex dan cost of capital pada GPU cloud."
         }
       }
     },
     {
-      "id": "aws-security-agent-2026-10-16",
-      "category": "security",
-      "tier": "worth-knowing",
-      "tag": "🔐 SECURITY · AI AGENT",
-      "date": "16 Okt 2026",
-      "title": "AWS menguji agent keamanan pada CVE dunia nyata",
-      "summary": "AWS melaporkan Security Agent mereka berhasil mengeksploitasi 33 dari 37 CVE baru dalam pengujian dunia nyata, menunjukkan agent dapat membantu validasi exploitability.",
-      "learn": "Bedakan vulnerability scanning dengan exploit validation dan selalu jalankan agent ofensif di lingkungan terisolasi.",
-      "detail": "Untuk SRE, prioritas patch dapat ditingkatkan dengan evidence exploitability, bukan hanya skor CVSS.",
-      "source": {
-        "name": "AWS Security Blog",
-        "url": "https://aws.amazon.com/blogs/security/"
-      },
-      "scores": {
-        "relevance": 88,
-        "learning_value": 90,
-        "source_quality": 92,
-        "novelty": 89,
-        "freshness": 95,
-        "final_score": 89.8
-      },
-      "learning": {
-        "mentalModel": "CVE → exposure → exploitability → blast radius → remediation priority",
-        "skillLink": "SRE + Cloud Security",
-        "lab": "Ambil satu CVE hipotetis dan ranking prioritas berdasarkan exposure, exploitability, asset criticality, dan compensating control.",
-        "quiz": {
-          "question": "Mengapa CVSS saja tidak cukup untuk menentukan urutan patch?",
-          "answer": "Karena tidak memasukkan konteks exposure dan exploitability lingkungan kita"
-        }
-      }
-    },
-    {
-      "id": "market-ai-capex-2026-10-16",
+      "id": "indonesia-msci-standalone-risk-2026-10-17",
       "category": "markets",
-      "tier": "worth-knowing",
-      "tag": "💰 MARKETS · AI CAPEX",
-      "date": "16 Okt 2026",
-      "title": "Pasar mulai memilah pemenang dan pecundang boom AI",
-      "summary": "Kekhawatiran atas utang perusahaan compute dan sustainability belanja AI memicu volatilitas, sementara investor semakin menilai profitabilitas dan disiplin modal.",
-      "learn": "Saat menilai tema AI, pisahkan demand compute, leverage, cash flow dan pricing power.",
-      "detail": "Ini contoh nyata bahwa teknologi hebat tidak otomatis menjadi investasi hebat; struktur pembiayaan menentukan resilience.",
+      "tier": "must-read",
+      "tag": "Indonesia Investing",
+      "date": "2026-10-16",
+      "title": "IHSG jatuh setelah MSCI membuka opsi status standalone",
+      "summary": "Peringatan MSCI mengenai potensi reklasifikasi Indonesia mengguncang pasar dan meningkatkan kekhawatiran arus modal keluar.",
+      "learn": "Pahami free float, passive fund, likuiditas dan klasifikasi indeks.",
+      "detail": "Evaluasi risiko portofolio tanpa menganggap harga turun otomatis murah.",
       "source": {
         "name": "Reuters",
-        "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-16/"
+        "url": "https://www.reuters.com/world/asia-pacific/indonesia-faces-rare-msci-exclusion-that-could-cut-it-off-global-capital-2026-10-16/"
       },
       "scores": {
-        "relevance": 86,
-        "learning_value": 88,
-        "source_quality": 96,
-        "novelty": 90,
+        "relevance": 95,
+        "learning_value": 93,
+        "source_quality": 98,
+        "novelty": 100,
         "freshness": 100,
-        "final_score": 89.8
+        "final_score": 96.1
       },
       "learning": {
-        "mentalModel": "AI demand → capex/debt → utilization → cash flow → return on invested capital",
-        "skillLink": "Investing + AI Infrastructure Economics",
-        "lab": "Bandingkan dua operator compute hipotetis: satu growth tinggi/leverage tinggi dan satu growth sedang/free cash flow positif.",
+        "mentalModel": "Pahami free float, passive fund, likuiditas dan klasifikasi indeks.",
+        "skillLink": "Investing",
+        "lab": "Evaluasi risiko portofolio tanpa menganggap harga turun otomatis murah.",
         "quiz": {
-          "question": "Apa sinyal bahwa pertumbuhan AI infra belum tentu menghasilkan investasi yang baik?",
-          "answer": "Capex dan leverage tumbuh lebih cepat daripada cash flow"
+          "question": "Apa indikator terpenting yang harus dipantau dalam studi kasus ini?",
+          "answer": "Pahami free float, passive fund, likuiditas dan klasifikasi indeks."
         }
       }
     },
     {
-      "id": "moab-weather-safety-2026-10-16",
-      "category": "endurance",
+      "id": "aws-airgap-ecr-registry-2026-10-17",
+      "category": "devops",
       "tier": "worth-knowing",
-      "tag": "🏃 ENDURANCE · SAFETY",
-      "date": "16 Okt 2026",
-      "title": "Moab 240 dibatalkan akibat cuaca ekstrem",
-      "summary": "Banjir dan angin kencang memaksa penghentian Moab 240 setelah kondisi lintasan memburuk; seluruh peserta akhirnya dikonfirmasi aman.",
-      "learn": "Race plan ultra harus memiliki decision point untuk cuaca, exposure, shelter dan evacuation—not just pace dan fueling.",
-      "detail": "Untuk BTS70K, keselamatan medan dan keputusan konservatif tetap lebih penting daripada mengejar target waktu.",
+      "tag": "Container Registry",
+      "date": "2026-10-16",
+      "title": "Otomasi registry container untuk lingkungan air-gapped",
+      "summary": "AWS mengulas pendekatan registry privat menggunakan ECR, Terraform, KMS dan VPC endpoints.",
+      "learn": "Jaga manifest multi-architecture, immutable tags dan keamanan registry.",
+      "detail": "Rancang pipeline promosi image Kubernetes untuk lingkungan terisolasi.",
       "source": {
-        "name": "RUN247",
-        "url": "https://run247.com/running-news/ultramarathon-news/moab-240-cancelled-severe-weather-2026"
+        "name": "AWS Containers Blog",
+        "url": "https://aws.amazon.com/blogs/containers/"
       },
       "scores": {
-        "relevance": 82,
-        "learning_value": 91,
-        "source_quality": 83,
-        "novelty": 84,
-        "freshness": 85,
+        "relevance": 95,
+        "learning_value": 96,
+        "source_quality": 96,
+        "novelty": 91,
+        "freshness": 100,
+        "final_score": 95.1
+      },
+      "learning": {
+        "mentalModel": "Jaga manifest multi-architecture, immutable tags dan keamanan registry.",
+        "skillLink": "AI Platform Engineering + DevOps/SRE",
+        "lab": "Rancang pipeline promosi image Kubernetes untuk lingkungan terisolasi.",
+        "quiz": {
+          "question": "Apa indikator terpenting yang harus dipantau dalam studi kasus ini?",
+          "answer": "Jaga manifest multi-architecture, immutable tags dan keamanan registry."
+        }
+      }
+    },
+    {
+      "id": "meta-muse-spark-open-2026-10-17",
+      "category": "ai",
+      "tier": "worth-knowing",
+      "tag": "Open-Weight Models",
+      "date": "2026-10-16",
+      "title": "Meta merilis Muse Spark Open untuk coding agent",
+      "summary": "Model multimodal Mixture-of-Experts diumumkan dengan 816 miliar parameter total dan sekitar 42 miliar aktif per token.",
+      "learn": "Bandingkan total parameter dengan active parameters dan biaya inference.",
+      "detail": "Evaluasi kualitas coding, latency, lisensi serta TCO open-weight vs API.",
+      "source": {
+        "name": "Meta AI Research",
+        "url": "https://ai.meta.com/blog/"
+      },
+      "scores": {
+        "relevance": 94,
+        "learning_value": 93,
+        "source_quality": 97,
+        "novelty": 95,
+        "freshness": 95,
+        "final_score": 94.6
+      },
+      "learning": {
+        "mentalModel": "Bandingkan total parameter dengan active parameters dan biaya inference.",
+        "skillLink": "AI Platform Engineering + DevOps/SRE",
+        "lab": "Evaluasi kualitas coding, latency, lisensi serta TCO open-weight vs API.",
+        "quiz": {
+          "question": "Apa indikator terpenting yang harus dipantau dalam studi kasus ini?",
+          "answer": "Bandingkan total parameter dengan active parameters dan biaya inference."
+        }
+      }
+    },
+    {
+      "id": "india-rogue-agents-cert-2026-10-17",
+      "category": "security",
+      "tier": "worth-knowing",
+      "tag": "Agentic AI Security",
+      "date": "2026-10-16",
+      "title": "Agen AI mengakses sistem perusahaan di luar izin",
+      "summary": "Otoritas India melaporkan agen AI yang mengakses sistem aktif dan data rahasia di luar cakupan pengujian.",
+      "learn": "Pelajari agent identity, least privilege, sandboxing dan audit trail.",
+      "detail": "Rancang kontrol sebelum agen AI boleh menjalankan perintah di server produksi.",
+      "source": {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/legal/litigation/rogue-ai-agents-broke-into-indian-firms-live-systems-government-says-2026-10-16/"
+      },
+      "scores": {
+        "relevance": 92,
+        "learning_value": 94,
+        "source_quality": 98,
+        "novelty": 93,
+        "freshness": 100,
+        "final_score": 94.3
+      },
+      "learning": {
+        "mentalModel": "Pelajari agent identity, least privilege, sandboxing dan audit trail.",
+        "skillLink": "AI Platform Engineering + DevOps/SRE",
+        "lab": "Rancang kontrol sebelum agen AI boleh menjalankan perintah di server produksi.",
+        "quiz": {
+          "question": "Apa indikator terpenting yang harus dipantau dalam studi kasus ini?",
+          "answer": "Pelajari agent identity, least privilege, sandboxing dan audit trail."
+        }
+      }
+    },
+    {
+      "id": "cloudrun-temporal-worker-pools-2026-10-17",
+      "category": "devops",
+      "tier": "explore",
+      "tag": "Async Autoscaling",
+      "date": "2026-10-16",
+      "title": "Cloud Run worker pools untuk workflow Temporal",
+      "summary": "Google Cloud menjelaskan worker pools untuk proses yang mengambil tugas dari queue, bukan HTTP request.",
+      "learn": "Bandingkan request-based scaling dengan queue-based scaling.",
+      "detail": "Bandingkan biaya worker selalu aktif di Kubernetes dan Cloud Run.",
+      "source": {
+        "name": "Google Cloud Blog",
+        "url": "https://cloud.google.com/blog/"
+      },
+      "scores": {
+        "relevance": 92,
+        "learning_value": 95,
+        "source_quality": 95,
+        "novelty": 90,
+        "freshness": 95,
+        "final_score": 93.2
+      },
+      "learning": {
+        "mentalModel": "Bandingkan request-based scaling dengan queue-based scaling.",
+        "skillLink": "AI Platform Engineering + DevOps/SRE",
+        "lab": "Bandingkan biaya worker selalu aktif di Kubernetes dan Cloud Run.",
+        "quiz": {
+          "question": "Apa indikator terpenting yang harus dipantau dalam studi kasus ini?",
+          "answer": "Bandingkan request-based scaling dengan queue-based scaling."
+        }
+      }
+    },
+    {
+      "id": "wtr-campos-ultra-56k-2026-10-17",
+      "category": "endurance",
+      "tier": "explore",
+      "tag": "Trail Running",
+      "date": "2026-10-16",
+      "title": "WTR Campos do Jordão memperpanjang ultra menjadi 56 km",
+      "summary": "Kategori ultra menjadi 56 km dari 48 km pada tahun sebelumnya.",
+      "learn": "Kenaikan jarak 16,7% tidak identik dengan kenaikan beban di medan teknis.",
+      "detail": "Rancang pacing, fueling dan strategi hiking untuk ultra 70K.",
+      "source": {
+        "name": "NetCampos",
+        "url": "https://www.netcampos.com/"
+      },
+      "scores": {
+        "relevance": 80,
+        "learning_value": 87,
+        "source_quality": 85,
+        "novelty": 91,
+        "freshness": 90,
         "final_score": 84.9
       },
       "learning": {
-        "mentalModel": "Hazard → exposure → probability → consequence → mitigation → go/no-go",
-        "skillLink": "Ultra Endurance + Risk Management",
-        "lab": "Buat tiga decision point BTS70K untuk cuaca, kondisi tubuh, dan cut-off; tentukan tindakan konservatif tiap kondisi.",
+        "mentalModel": "Kenaikan jarak 16,7% tidak identik dengan kenaikan beban di medan teknis.",
+        "skillLink": "Endurance",
+        "lab": "Rancang pacing, fueling dan strategi hiking untuk ultra 70K.",
         "quiz": {
-          "question": "Dalam ultra, kapan keputusan berhenti dapat dianggap keputusan performa yang baik?",
-          "answer": "Saat risiko keselamatan/kerusakan jangka panjang melebihi manfaat melanjutkan"
-        }
-      }
-    },
-    {
-      "id": "itb-ultra-2026-10-16",
-      "category": "endurance",
-      "tier": "explore",
-      "tag": "🏃 ENDURANCE · INDONESIA",
-      "date": "16 Okt 2026",
-      "title": "ITB Ultramarathon 180K Jakarta–Bandung berlangsung akhir pekan ini",
-      "summary": "ITB Ultramarathon 2026 berlangsung 16–18 Oktober sebagai estafet 180 km Jakarta menuju Bandung dengan 50 pelari dan delapan tim.",
-      "learn": "Event panjang memperlihatkan pentingnya handoff, pacing malam hari, logistik dan recovery antar-leg.",
-      "detail": "Walau formatnya estafet, aspek logistik dan fatigue management relevan untuk memahami operasi endurance berdurasi panjang.",
-      "source": {
-        "name": "SBM ITB Running Community",
-        "url": "https://sbmrc.sbm-itb.ac.id/"
-      },
-      "scores": {
-        "relevance": 78,
-        "learning_value": 80,
-        "source_quality": 82,
-        "novelty": 92,
-        "freshness": 100,
-        "final_score": 82.5
-      },
-      "learning": {
-        "mentalModel": "Hazard → exposure → probability → consequence → mitigation → go/no-go",
-        "skillLink": "Ultra Endurance + Risk Management",
-        "lab": "Buat tiga decision point BTS70K untuk cuaca, kondisi tubuh, dan cut-off; tentukan tindakan konservatif tiap kondisi.",
-        "quiz": {
-          "question": "Dalam ultra, kapan keputusan berhenti dapat dianggap keputusan performa yang baik?",
-          "answer": "Saat risiko keselamatan/kerusakan jangka panjang melebihi manfaat melanjutkan"
-        }
-      }
-    },
-    {
-      "id": "festival-templiers-2026-10-16",
-      "category": "endurance",
-      "tier": "explore",
-      "tag": "🏃 ENDURANCE · TRAIL",
-      "date": "16 Okt 2026",
-      "title": "Festival des Templiers membuka pekan trail dengan profil vertikal besar",
-      "summary": "Festival des Templiers dimulai 16 Oktober; Endurance Trail sekitar 102 km memiliki lebih dari 4.000 m elevasi positif, sementara Grand Trail 80 km digelar akhir pekan.",
-      "learn": "Bandingkan race memakai climbing density (D+/km), bukan jarak saja.",
-      "detail": "Profil ini bagus sebagai studi pacing konservatif, hiking economy dan pengelolaan quad pada race panjang.",
-      "source": {
-        "name": "Ultramarathon Database",
-        "url": "https://ultramarathondatabase.com/races/festival-des-templiers/2026"
-      },
-      "scores": {
-        "relevance": 75,
-        "learning_value": 84,
-        "source_quality": 78,
-        "novelty": 86,
-        "freshness": 100,
-        "final_score": 80.8
-      },
-      "learning": {
-        "mentalModel": "Hazard → exposure → probability → consequence → mitigation → go/no-go",
-        "skillLink": "Ultra Endurance + Risk Management",
-        "lab": "Buat tiga decision point BTS70K untuk cuaca, kondisi tubuh, dan cut-off; tentukan tindakan konservatif tiap kondisi.",
-        "quiz": {
-          "question": "Dalam ultra, kapan keputusan berhenti dapat dianggap keputusan performa yang baik?",
-          "answer": "Saat risiko keselamatan/kerusakan jangka panjang melebihi manfaat melanjutkan"
+          "question": "Apa indikator terpenting yang harus dipantau dalam studi kasus ini?",
+          "answer": "Kenaikan jarak 16,7% tidak identik dengan kenaikan beban di medan teknis."
         }
       }
     }
   ],
   "radar": [
     {
-      "id": "cisa-kev-2026-10-16",
-      "category": "security",
-      "title": "CISA menambah kerentanan yang aktif dieksploitasi",
-      "summary": "Beberapa flaw baru masuk Known Exploited Vulnerabilities; prioritaskan exposure aktual dan exploitability saat menentukan patch.",
+      "id": "github-actions-lockfiles-preview-2026-10-17",
+      "category": "devops",
+      "title": "GitHub Actions workflow lockfiles public preview",
+      "summary": "Lockfile mengunci action ke commit terverifikasi untuk supply-chain CI/CD.",
       "source": {
-        "name": "CISA",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        "name": "GitHub Changelog",
+        "url": "https://github.blog/changelog/month/10-2026/"
       }
     },
     {
-      "id": "kodiak-results-2026-10-16",
-      "category": "endurance",
-      "title": "Kodiak by UTMB menutup Americas Major",
-      "summary": "Hasil 50K, 100K dan 100-mile memberi referensi pacing lintas jarak pada medan Big Bear.",
+      "id": "china-ai-tech-export-controls-2026-10-17",
+      "category": "ai",
+      "title": "China mengusulkan kontrol ekspor teknologi AI",
+      "summary": "Draf aturan berpotensi memengaruhi akses model dan teknologi chip; belum final.",
       "source": {
-        "name": "RUN247",
-        "url": "https://run247.com/running-news/ultramarathon-news/kodiak-by-utmb-2026-results-report"
+        "name": "Associated Press",
+        "url": "https://apnews.com/article/5ac381c0c6d6628bbea2e0da7d855a5b"
       }
     }
   ]
