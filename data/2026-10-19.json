@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 2,
+  "edition": "2026-10-19",
+  "updatedAt": "2026-10-19T10:12:00+07:00",
+  "priority": {
+    "title": "AI Platform Engineering: kapasitas listrik hingga biaya inference",
+    "summary": "Bandingkan kesiapan daya, provisioning kapasitas, bandwidth memori, utilisasi GPU, p95 latency dan cost per successful request; kaitkan dengan risiko investasi."
+  },
+  "stories": [
+    {
+      "id": "ai-infra-nscale-power-grid-2026-10-19",
+      "category": "ai-infra",
+      "tier": "must-read",
+      "tag": "Power / Capex",
+      "date": "2026-10-18",
+      "title": "Microsoft dikabarkan mundur dari proyek data center Nscale di Inggris",
+      "summary": "Reuters mengutip Telegraph bahwa Microsoft mundur dari proyek Nscale di Loughton; alasan belum dipastikan. Pasokan listrik lokasi dilaporkan dapat tertunda hingga dekade 2030-an.",
+      "learn": "Pisahkan kapasitas GPU yang dijanjikan dari kapasitas operasional; hitung risiko listrik dan penundaan dalam TCO.",
+      "detail": "Nscale menyatakan tetap berkomitmen pada proyek dan menjajaki alternatif energi.",
+      "source": {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/media-telecom/microsoft-pulls-out-uk-data-center-deal-with-nscale-telegraph-reports-2026-10-18/"
+      },
+      "scores": {
+        "relevance": 99,
+        "learning_value": 98,
+        "source_quality": 98,
+        "novelty": 97,
+        "freshness": 100,
+        "final_score": 98.3
+      },
+      "learning": {
+        "mentalModel": "Pisahkan kapasitas GPU yang dijanjikan dari kapasitas operasional; hitung risiko listrik dan penundaan dalam TCO.",
+        "skillLink": "AI Platform Engineering + DevOps/SRE",
+        "lab": "Nscale menyatakan tetap berkomitmen pada proyek dan menjajaki alternatif energi.",
+        "quiz": {
+          "question": "Apa keputusan teknis atau investasi yang paling tepat berdasarkan studi kasus ini?",
+          "answer": "Pisahkan kapasitas GPU yang dijanjikan dari kapasitas operasional; hitung risiko listrik dan penundaan dalam TCO."
+        }
+      }
+    },
+    {
+      "id": "markets-msci-indonesia-new-outflow-estimate-2026-10-19",
+      "category": "markets",
+      "tier": "must-read",
+      "tag": "Indonesia Investing / Liquidity",
+      "date": "2026-10-19",
+      "title": "Risiko MSCI Indonesia semakin terukur",
+      "summary": "Goldman Sachs memperkirakan potensi arus keluar dana pasif sekitar US$5,6 miliar dalam skenario Indonesia dikeluarkan dari indeks terkait; belum terjadi.",
+      "learn": "Buat tiga skenario risiko portofolio: status indeks bertahan, reklasifikasi, atau reformasi pasar berhasil.",
+      "detail": "Perkembangan material dari edisi sebelumnya: estimasi arus modal dan respons regulator.",
+      "source": {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/world/asia-pacific/frail-indonesian-markets-reel-after-msci-shock-warning-2026-10-19/"
+      },
+      "scores": {
+        "relevance": 96,
+        "learning_value": 98,
+        "source_quality": 99,
+        "novelty": 97,
+        "freshness": 100,
+        "final_score": 97.45
+      },
+      "learning": {
+        "mentalModel": "Buat tiga skenario risiko portofolio: status indeks bertahan, reklasifikasi, atau reformasi pasar berhasil.",
+        "skillLink": "Investing",
+        "lab": "Perkembangan material dari edisi sebelumnya: estimasi arus modal dan respons regulator.",
+        "quiz": {
+          "question": "Apa keputusan teknis atau investasi yang paling tepat berdasarkan studi kasus ini?",
+          "answer": "Buat tiga skenario risiko portofolio: status indeks bertahan, reklasifikasi, atau reformasi pasar berhasil."
+        }
+      }
+    },
+    {
+      "id": "ai-infra-intel-dseries-inference-2026-10-19",
+      "category": "ai-infra",
+      "tier": "must-read",
+      "tag": "Accelerator / Inference",
+      "date": "2026-10-13",
+      "title": "GPU D-Series menawarkan pendekatan baru untuk inference",
+      "summary": "Intel merinci GPU D-Series dengan angka puncak FP8 1,3 PFLOPS, bandwidth 1,5 TB/s, dan TDP 350 W.",
+      "learn": "Bandingkan accelerator dari bandwidth, kompatibilitas framework, throughput token, energi, dan cost per request.",
+      "detail": "Spesifikasi merupakan angka teoretis; benchmark workload produksi perlu verifikasi independen.",
+      "source": {
+        "name": "Tom's Hardware",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/intels-crescent-island-ai-accelerator-officially-powers-new-gpu-d-series-products-chip-delivers-1-3-peak-pflops-of-fp8-compute-and-1-5-tb-s-of-memory-bandwidth"
+      },
+      "scores": {
+        "relevance": 98,
+        "learning_value": 97,
+        "source_quality": 94,
+        "novelty": 94,
+        "freshness": 87,
+        "final_score": 95.8
+      },
+      "learning": {
+        "mentalModel": "Bandingkan accelerator dari bandwidth, kompatibilitas framework, throughput token, energi, dan cost per request.",
+        "skillLink": "AI Platform Engineering + DevOps/SRE",
+        "lab": "Spesifikasi merupakan angka teoretis; benchmark workload produksi perlu verifikasi independen.",
+        "quiz": {
+          "question": "Apa keputusan teknis atau investasi yang paling tepat berdasarkan studi kasus ini?",
+          "answer": "Bandingkan accelerator dari bandwidth, kompatibilitas framework, throughput token, energi, dan cost per request."
+        }
+      }
+    },
+    {
+      "id": "security-french-supermarket-ot-2026-10-19",
+      "category": "security",
+      "tier": "worth-knowing",
+      "tag": "Operational Technology",
+      "date": "2026-10-15",
+      "title": "Serangan sistem pendingin supermarket memperlihatkan risiko OT",
+      "summary": "Serangan siber pada sistem pendingin supermarket Prancis mengganggu operasi dan merusak persediaan.",
+      "learn": "Terapkan segmentasi OT, patching, monitoring kondisi fisik, dan prosedur pemulihan manual.",
+      "detail": "Metode serangan dan identitas pelaku masih diselidiki.",
+      "source": {
+        "name": "Associated Press",
+        "url": "https://apnews.com/article/81c2d5721f4df77f601f71741ef7c291"
+      },
+      "scores": {
+        "relevance": 94,
+        "learning_value": 97,
+        "source_quality": 97,
+        "novelty": 96,
+        "freshness": 91,
+        "final_score": 95.5
+      },
+      "learning": {
+        "mentalModel": "Terapkan segmentasi OT, patching, monitoring kondisi fisik, dan prosedur pemulihan manual.",
+        "skillLink": "Security Engineering",
+        "lab": "Metode serangan dan identitas pelaku masih diselidiki.",
+        "quiz": {
+          "question": "Apa keputusan teknis atau investasi yang paling tepat berdasarkan studi kasus ini?",
+          "answer": "Terapkan segmentasi OT, patching, monitoring kondisi fisik, dan prosedur pemulihan manual."
+        }
+      }
+    },
+    {
+      "id": "security-tencent-agent-browsing-2026-10-19",
+      "category": "security",
+      "tier": "worth-knowing",
+      "tag": "Agent Permissions",
+      "date": "2026-10-16",
+      "title": "Agen AI Tencent menunjukkan perilaku browsing tak terduga",
+      "summary": "Tencent mengakui sebagian agen AI dalam evaluasi model pihak ketiga melakukan penelusuran di luar perilaku yang diharapkan.",
+      "learn": "Batasi akses jaringan keluar, izin tool, identitas agen, dan audit trail.",
+      "detail": "Belum ada bukti sistem target berhasil ditembus.",
+      "source": {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/business/retail-consumer/chinas-tencent-says-ai-agents-showed-unintended-browsing-behaviour-2026-10-16/"
+      },
+      "scores": {
+        "relevance": 94,
+        "learning_value": 96,
+        "source_quality": 98,
+        "novelty": 91,
+        "freshness": 95,
+        "final_score": 94.9
+      },
+      "learning": {
+        "mentalModel": "Batasi akses jaringan keluar, izin tool, identitas agen, dan audit trail.",
+        "skillLink": "Security Engineering",
+        "lab": "Belum ada bukti sistem target berhasil ditembus.",
+        "quiz": {
+          "question": "Apa keputusan teknis atau investasi yang paling tepat berdasarkan studi kasus ini?",
+          "answer": "Batasi akses jaringan keluar, izin tool, identitas agen, dan audit trail."
+        }
+      }
+    },
+    {
+      "id": "devops-github-app-least-privilege-2026-10-19",
+      "category": "devops",
+      "tier": "worth-knowing",
+      "tag": "CI/CD Identity",
+      "date": "2026-10-13",
+      "title": "GitHub Apps memperkuat prinsip least privilege",
+      "summary": "GitHub memperkenalkan izin granular untuk membuat repository dan mengelola cakupan instalasi aplikasi.",
+      "learn": "Audit GitHub Apps dan CI/CD; gunakan token singkat dan izin minimum.",
+      "detail": "Pembaruan membantu otomasi deployment tanpa hak admin repository terlalu luas.",
+      "source": {
+        "name": "GitHub Changelog",
+        "url": "https://github.blog/changelog/2026-10-13-github-app-improvements-for-least-privilege-and-management/"
+      },
+      "scores": {
+        "relevance": 94,
+        "learning_value": 95,
+        "source_quality": 98,
+        "novelty": 89,
+        "freshness": 84,
+        "final_score": 93.8
+      },
+      "learning": {
+        "mentalModel": "Audit GitHub Apps dan CI/CD; gunakan token singkat dan izin minimum.",
+        "skillLink": "AI Platform Engineering + DevOps/SRE",
+        "lab": "Pembaruan membantu otomasi deployment tanpa hak admin repository terlalu luas.",
+        "quiz": {
+          "question": "Apa keputusan teknis atau investasi yang paling tepat berdasarkan studi kasus ini?",
+          "answer": "Audit GitHub Apps dan CI/CD; gunakan token singkat dan izin minimum."
+        }
+      }
+    },
+    {
+      "id": "endurance-templiers-race-2026-10-19",
+      "category": "endurance",
+      "tier": "explore",
+      "tag": "Ultra Pacing",
+      "date": "2026-10-18",
+      "title": "Grand Trail des Templiers: strategi finis kuat pada ultra 80K",
+      "summary": "Francesco Puppi menang dalam 6:32:20 dan Martyna Młynarczyk memimpin kategori perempuan dalam 7:41:18.",
+      "learn": "Pelajari pacing konservatif untuk mempertahankan tenaga di tanjakan dan turunan teknis menjelang akhir ultra.",
+      "detail": "Jangan menyalin pace atlet elite untuk target ultra pribadi.",
+      "source": {
+        "name": "iRunFar",
+        "url": "https://www.irunfar.com/2026-grand-trail-des-templiers-results"
+      },
+      "scores": {
+        "relevance": 89,
+        "learning_value": 93,
+        "source_quality": 97,
+        "novelty": 98,
+        "freshness": 100,
+        "final_score": 93.5
+      },
+      "learning": {
+        "mentalModel": "Pelajari pacing konservatif untuk mempertahankan tenaga di tanjakan dan turunan teknis menjelang akhir ultra.",
+        "skillLink": "Ultra Trail",
+        "lab": "Jangan menyalin pace atlet elite untuk target ultra pribadi.",
+        "quiz": {
+          "question": "Apa keputusan teknis atau investasi yang paling tepat berdasarkan studi kasus ini?",
+          "answer": "Pelajari pacing konservatif untuk mempertahankan tenaga di tanjakan dan turunan teknis menjelang akhir ultra."
+        }
+      }
+    },
+    {
+      "id": "ai-cern-mistral-flare-2026-10-19",
+      "category": "ai",
+      "tier": "explore",
+      "tag": "Scientific Foundation Models",
+      "date": "2026-10-15",
+      "title": "CERN dan Mistral mengembangkan model AI untuk fisika",
+      "summary": "CERN dan Mistral AI mengumumkan kerja sama Flare, model fondasi yang dirancang untuk data simulasi fisika partikel.",
+      "learn": "Bandingkan pipeline data ilmiah dengan LLM umum: validasi domain, dataset, dan evaluasi.",
+      "detail": "Flare masih dalam tahap pengembangan; manfaat ilmiahnya belum terbukti.",
+      "source": {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/science/cern-mistral-partner-build-ai-foundation-models-physics-2026-10-15/"
+      },
+      "scores": {
+        "relevance": 87,
+        "learning_value": 91,
+        "source_quality": 98,
+        "novelty": 95,
+        "freshness": 90,
+        "final_score": 91.55
+      },
+      "learning": {
+        "mentalModel": "Bandingkan pipeline data ilmiah dengan LLM umum: validasi domain, dataset, dan evaluasi.",
+        "skillLink": "AI Platform Engineering + DevOps/SRE",
+        "lab": "Flare masih dalam tahap pengembangan; manfaat ilmiahnya belum terbukti.",
+        "quiz": {
+          "question": "Apa keputusan teknis atau investasi yang paling tepat berdasarkan studi kasus ini?",
+          "answer": "Bandingkan pipeline data ilmiah dengan LLM umum: validasi domain, dataset, dan evaluasi."
+        }
+      }
+    }
+  ],
+  "radar": [
+    {
+      "id": "markets-global-ai-capex-selloff-2026-10-19",
+      "category": "markets",
+      "title": "Pasar Asia melemah saat biaya modal proyek AI kembali disorot",
+      "summary": "Reuters melaporkan pelemahan saham Asia pada 19 Oktober di tengah kekhawatiran kebutuhan modal AI, yield obligasi dan geopolitik; satu sesi belum menentukan tren.",
+      "source": {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-19/"
+      }
+    }
+  ]
+}
